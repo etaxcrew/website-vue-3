@@ -5,7 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import axios from 'axios';
 
 //default base URL / EndPoint API
-axios.defaults.baseURL = "https://panel.gorontalohosting.com";
+axios.defaults.baseURL = "https://dkp.boalemokab.go.id/gh-admin";
 
 //define a routes
 const routes = [
