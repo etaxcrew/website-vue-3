@@ -1,17 +1,71 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
+<html dir="ltr" lang="id">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+	<meta name="author" content="Hendra Kahar" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Sansita:400,700|Roboto:400,500&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/style.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/swiper.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/dark.css" type="text/css" />
+
+	<link rel="stylesheet" href="/assets/css/colors.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/fonts.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/yoga.css" type="text/css" />
+
+	<link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="/assets/css/custom.css" type="text/css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Dinas Kelautan dan Perikanan Kabupaten Boalemo</title>
+	<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+</head>
+
+<body class="stretched sticky-footer">
+	
+	<div id="app"></div>
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="/assets/js/jquery.js"></script>
+	<script src="/assets/js/plugins.min.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="/assets/js/functions.js"></script>
+
+	<script>
+		// Owl Carousel Scripts
+		jQuery(window).on( 'pluginCarouselReady', function(){
+			$('#oc-teachers').owlCarousel({
+				items: 1,
+				margin: 30,
+				nav: true,
+				navText: ['<i class="icon-line-arrow-left"></i>','<i class="icon-line-arrow-right"></i>'],
+				dots: false,
+				smartSpeed: 300,
+				stagePadding: 60,
+				responsive:{
+					768: { stagePadding: 100, margin: 30, items: 1 },
+					991: { stagePadding: 100, margin: 40, smartSpeed: 400, items: 2 },
+					1200: { stagePadding: 100, margin: 40, smartSpeed: 400, items: 2}
+				},
+			});
+		});
+	</script>
+
+</body>
 </html>
