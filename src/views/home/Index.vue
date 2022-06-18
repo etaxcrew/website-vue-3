@@ -96,120 +96,43 @@
                             </div>
                         </div>
 
-                        <div id="oc-teachers" class="owl-carousel owl-carousel-full image-carousel carousel-widget customjs">
-
-                            <div v-if="posts.length > 0" class="oc-item">
-                                <div v-for="post in posts" :key="post.id"
-                                class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column"
-                                style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('post.image') no-repeat center center / cover;">
-                                    <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-                                        <div class="col-md-12">
-                                            <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                                                <h3 class="mb-1">
-                                                    <router-link :to="{name: 'detail_post', params: {slug: post.slug}}" class="text-dark text-decoration-none">
-                                                        {{ post.title }}
-                                                    </router-link>
-                                                </h3>
-                                                <div class="testi-meta ls1 mb-4 text-light fw-normal"> Berita Daerah</div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li><i class="icon-calendar3"></i> {{ post.created_at }}</li>
-                                                        <li><a href="#"><i class="icon-eye"></i> 13 kali dilihat</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div v-else>
-                                <div class="row">
-                                    <div class="col-md-4 mb-3" v-for="loader in posts_loader" :key="loader">
-                                        <div class="card border-0 shadow-sm rounded-lg">
-                                            <div class="card-body">
-                                                <FacebookLoader />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end berita section -->
-
-                            <!--<div class="oc-item">
-                                <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('/assets/images/tes.jpg') no-repeat center center / cover;">
-                                    <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-                                        <div class="col-md-12">
-                                            <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                                                <h3 class="mb-1">Bupati Anas Jusuf Tandatangani Naskah Kerja Sama dengan Unisa Palu</h3>
-                                                <div class="testi-meta ls1 mb-4 text-light fw-normal"> Berita Daerah</div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li><i class="icon-calendar3"></i> 14 Juni 2022</li>
-                                                        <li><a href="#"><i class="icon-eye"></i> 13 kali dilihat</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="oc-item">
-                                <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('/assets/images/tes.jpg') no-repeat center center / cover;">
-                                    <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-                                        <div class="col-md-12">
-                                            <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                                                <h3 class="mb-1">Bupati Anas Jusuf Tandatangani Naskah Kerja Sama dengan Unisa Palu</h3>
-                                                <div class="testi-meta ls1 mb-4 text-light fw-normal"> Berita Daerah</div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li><i class="icon-calendar3"></i> 14 Juni 2022</li>
-                                                        <li><a href="#"><i class="icon-eye"></i> 13 kali dilihat</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="oc-item">
-                                <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('/assets/images/tes.jpg') no-repeat center center / cover;">
-                                    <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-                                        <div class="col-md-12">
-                                            <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                                                <h3 class="mb-1">Bupati Anas Jusuf Tandatangani Naskah Kerja Sama dengan Unisa Palu</h3>
-                                                <div class="testi-meta ls1 mb-4 text-light fw-normal"> Berita Daerah</div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li><i class="icon-calendar3"></i> 14 Juni 2022</li>
-                                                        <li><a href="#"><i class="icon-eye"></i> 13 kali dilihat</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="oc-item">
-                                <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('/assets/images/tes.jpg') no-repeat center center / cover;">
-                                    <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-                                        <div class="col-md-12">
-                                            <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                                                <h3 class="mb-1">Bupati Anas Jusuf Tandatangani Naskah Kerja Sama dengan Unisa Palu</h3>
-                                                <div class="testi-meta ls1 mb-4 text-light fw-normal"> Berita Daerah</div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li><i class="icon-calendar3"></i> 14 Juni 2022</li>
-                                                        <li><a href="#"><i class="icon-eye"></i> 13 kali dilihat</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
-
+                        <!-- berita section -->
+                        <div class="col-md-12 mb-3">
+                            <h4><i class="fas fa-book-open"></i> BERITA TERBARU</h4>
                         </div>
+
+                        <div v-if="posts.length > 0" class="row">
+                            <div class="col-md-4 mb-4" v-for="post in posts" :key="post.id">
+                                <div class="card h-100 shadow-sm border-0 rounded-lg">
+                                    <div class="card-img">
+                                        <img :src="post.image" class="w-100"
+                                            style="height: 200px;object-fit: cover;border-top-left-radius: .3rem;border-top-right-radius: .3rem;">
+                                    </div>
+                                    <div class="card-body">
+                                        <router-link :to="{name: 'detail_post', params: {slug: post.slug}}"
+                                            class="text-dark text-decoration-none">
+                                            <h6>{{ post.title }}</h6>
+                                        </router-link>
+                                    </div>
+                                    <div class="card-footer bg-white">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.created_at }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div v-else>
+                            <div class="row">
+                                <div class="col-md-4 mb-3" v-for="loader in posts_loader" :key="loader">
+                                    <div class="card border-0 shadow-sm rounded-lg">
+                                        <div class="card-body">
+                                            <FacebookLoader />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end berita section -->
 
                     </div>
 
